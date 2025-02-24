@@ -75,6 +75,7 @@ vim.cmd 'match Error /\\%>120c/'
 
 --  Escape insert with 'jj'
 vim.keymap.set('i', 'jj', '<Esc>')
+vim.keymap.set('t', 'jj', '<C-\\><C-n>')
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
