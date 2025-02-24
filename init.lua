@@ -465,6 +465,10 @@ require('lazy').setup({
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
+          -- Attempt to go to the header file of the same name.
+          vim.keymap.set('n', 'gh', ':e %:r.h<Enter>', { desc = '[G]oto [H]eader file of the same name' })
+          vim.keymap.set('n', 'gs', ':e %:r.c<Enter>', { desc = '[G]oto [S]ource file of the same name' })
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed
